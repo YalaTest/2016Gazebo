@@ -1,0 +1,181 @@
+NPM(1)                                                                  NPM(1)
+
+
+
+NNAAMMEE
+       nnppmm - node package manager
+
+SSYYNNOOPPSSIISS
+       npm <command> [args]
+
+VVEERRSSIIOONN
+       1.3.10
+
+DDEESSCCRRIIPPTTIIOONN
+       npm  is  the  package manager for the Node JavaScript platform. It puts
+       modules in place so that node can find  them,  and  manages  dependency
+       conflicts intelligently.
+
+       It  is  extremely  configurable to support a wide variety of use cases.
+       Most commonly, it is used to publish, discover,  install,  and  develop
+       node programs.
+
+       Run nnppmm hheellpp to get a list of available commands.
+
+IINNTTRROODDUUCCTTIIOONN
+       You probably got npm because you want to install stuff.
+
+       npm  help  Use  nnppmm  iinnssttaallll  bblleerrgg  to  install  the latest version of
+       "blerg". Check out nnppmm--iinnssttaallll for more info. It can do a lot of stuff.
+
+       Use the nnppmm sseeaarrcchh command to show everything that´s available. Use nnppmm
+       llss to show everything you´ve installed.
+
+DDIIRREECCTTOORRIIEESS
+       npm help  See nnppmm--ffoollddeerrss to learn about where npm puts stuff.
+
+       In particular, npm has two modes of operation:
+
+       global mode:
+              npm   installs   packages   into  the  install  prefix  at  pprree‐‐
+              ffiixx//lliibb//nnooddee__mmoodduulleess and bins are installed in pprreeffiixx//bbiinn.
+
+
+       local mode:
+              npm installs packages into the current project directory,  which
+              defaults   to   the  current  working  directory.  Packages  are
+              installed  to  ..//nnooddee__mmoodduulleess,  and  bins   are   installed   to
+              ..//nnooddee__mmoodduulleess//..bbiinn.
+
+
+       Local mode is the default. Use ----gglloobbaall or --gg on any command to operate
+       in global mode instead.
+
+DDEEVVEELLOOPPEERR UUSSAAGGEE
+       If you´re using npm to develop and publish your  code,  check  out  the
+       following help topics:
+
+       json   npm help  Make a package.json file. See ppaacckkaaggee..jjssoonn.
+
+       link   For  linking your current working code into Node´s path, so that
+              you don´t have to reinstall every time you make  a  change.  Use
+              nnppmm lliinnkk to do this.
+
+       install
+              It´s  a  good  idea to install things if you don´t need the sym‐
+              bolic link. Especially, installing other peoples code  from  the
+              registry is done via nnppmm iinnssttaallll
+
+       adduser
+              Create  an account or log in. Credentials are stored in the user
+              config file.
+
+       publish
+              Use the nnppmm ppuubblliisshh command to upload your code to the registry.
+
+CCOONNFFIIGGUURRAATTIIOONN
+       npm is extremely configurable. It reads its configuration options  from
+       5 places.
+
+       Command line switches:
+              Set a config with ----kkeeyy vvaall. All keys take a value, even if they
+              are booleans (the config parser doesn´t know  what  the  options
+              are  at  the time of parsing.) If no value is provided, then the
+              option is set to boolean ttrruuee.
+
+
+       Environment Variables:
+              Set any config by prefixing the name in an environment  variable
+              with nnppmm__ccoonnffiigg__. For example, eexxppoorrtt nnppmm__ccoonnffiigg__kkeeyy==vvaall.
+
+
+       User Configs:
+              The file at $HOME/.npmrc is an ini-formatted list of configs. If
+              present, it is parsed. If the uusseerrccoonnffiigg option is  set  in  the
+              cli or env, then that will be used instead.
+
+
+       Global Configs:
+              The  file  found  at  ../etc/npmrc (from the node executable, by
+              default this resolves to /usr/local/etc/npmrc) will be parsed if
+              it  is found. If the gglloobbaallccoonnffiigg option is set in the cli, env,
+              or user config, then that file is parsed instead.
+
+
+       Defaults:
+              npm´s   default   configuration   options   are    defined    in
+              lib/utils/config-defs.js. These must not be changed.
+
+
+       npm help  See nnppmm--ccoonnffiigg for much much more information.
+
+CCOONNTTRRIIBBUUTTIIOONNSS
+       Patches welcome!
+
+       code   npm  help   Read  through nnppmm--ccooddiinngg--ssttyyllee if you plan to submit
+              code. You don´t have to agree with it, but you do have to follow
+              it.
+
+       docs   If  you find an error in the documentation, edit the appropriate
+              markdown file in the "doc" folder. (Don´t worry about generating
+              the man page.)
+
+       Contributors  are  listed in npm´s ppaacckkaaggee..jjssoonn file. You can view them
+       easily by doing nnppmm vviieeww nnppmm ccoonnttrriibbuuttoorrss.
+
+       If you would like to contribute, but don´t know what to work on,  check
+       the issues list or ask on the mailing list.
+
+       ·   _h_t_t_p_:_/_/_g_i_t_h_u_b_._c_o_m_/_i_s_a_a_c_s_/_n_p_m_/_i_s_s_u_e_s
+
+       ·   _n_p_m_-_@_g_o_o_g_l_e_g_r_o_u_p_s_._c_o_m
+
+
+
+BBUUGGSS
+       When you find issues, please report them:
+
+       web    _h_t_t_p_:_/_/_g_i_t_h_u_b_._c_o_m_/_i_s_a_a_c_s_/_n_p_m_/_i_s_s_u_e_s
+
+       email  _n_p_m_-_@_g_o_o_g_l_e_g_r_o_u_p_s_._c_o_m
+
+       Be  sure  to include _a_l_l of the output from the npm command that didn´t
+       work as expected. The nnppmm--ddeebbuugg..lloogg file is also helpful to provide.
+
+       You can also look for isaacs in #node.js on irc://irc.freenode.net.  He
+       will no doubt tell you to put the output in a gist or email.
+
+HHIISSTTOORRYY
+       npm help See npm-changelog
+
+AAUUTTHHOORR
+       Isaac      Z.      Schlueter      _h_t_t_p_:_/_/_b_l_o_g_._i_z_s_._m_e_/     ::     isaacs
+       _h_t_t_p_s_:_/_/_g_i_t_h_u_b_._c_o_m_/_i_s_a_a_c_s_/ :: @izs _h_t_t_p_:_/_/_t_w_i_t_t_e_r_._c_o_m_/_i_z_s :: _i_@_i_z_s_._m_e
+
+SSEEEE AALLSSOO
+       ·   npm help help
+
+       ·   npm help  faq
+
+       ·   README
+
+       ·   npm help  package.json
+
+       ·   npm help install
+
+       ·   npm help config
+
+       ·   npm help  config
+
+       ·   npm help  npmrc
+
+       ·   npm help  index
+
+       ·   npm apihelp npm
+
+
+
+
+
+
+                                 October 2013                           NPM(1)

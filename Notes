@@ -1,0 +1,51 @@
+// Overview of plugins tutorial (done)
+http://gazebosim.org/tutorials?tut=plugins_hello_world&cat=write_plugin
+
+// add (shared) library path to env variable
+// PLUGIN
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/Gazebo/gazebo_plugin_tutorial/build
+// MODEL
+export GAZEBO_MODEL_PATH=$HOME/Gazebo/gazebo_plugin_tutorial/models:$GAZEBO_MODEL_PATH
+
+// using a plugin, hello.world contains plugin info
+gzserver ~/gazebo_plugin_tutorial/hello.world --verbose
+
+// model plugins (read more into)
+http://gazebosim.org/tutorials?tut=plugins_model&cat=write_plugin
+
+// Programmatic World Control
+http://gazebosim.org/tutorials?tut=plugins_world_properties&cat=write_plugin
+
+// World plugins
+http://gazebosim.org/tutorials?tut=plugins_world&cat=write_plugin
+
+// Two wheel robot
+http://gazebosim.org/tutorials?tut=build_robot&cat=build_robot
+
+// Attach mesh
+http://gazebosim.org/tutorials/?tut=attach_meshes
+
+// Add a senser
+http://gazebosim.org/tutorials/?tut=add_laser
+
+// Attach Gripper to Robot
+http://gazebosim.org/tutorials?tut=attach_gripper&cat=build_robot
+
+// OpenGL
+http://answers.gazebosim.org/question/4208/how-to-run-gazebo-19-headless/
+http://answers.ros.org/question/35013/running-gazebo-headless-in-fuerte-over-ssh/
+http://arrayfire.com/remote-off-screen-rendering-with-opengl/
+http://arrayfire.com/remote-off-screen-rendering-with-opengl/
+http://renderingpipeline.com/2012/05/windowless-opengl/
+
+
+// GazeboJS
+installed nodejs & npm
+
+http://gazebosim.org/tutorials?tut=gazebojs_pubsub&cat=gazebojs
+messages: Protobuf
+JSON in JS
+Publishers on Gazebo server or Node client (new topics or existing topics)
+Subscribers listen on topics
+
+Verify simulation is running: SimTime increases
